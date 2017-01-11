@@ -45,7 +45,7 @@ public class RestaurantCodeApplicationTests extends TestCase {
 			times[i] = testData[i][0];
 			satisfactions[i] = testData[i][1];
 		}
-		assertTrue(restaurantService.maxSatisfaction(maxTime, times, satisfactions, items) == expectedResult);
+		assertEquals(restaurantService.maxSatisfaction(maxTime, times, satisfactions, items), expectedResult);
 	}
 
 	@Autowired
