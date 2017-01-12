@@ -21,7 +21,7 @@ public class RestaurantCodeApplicationTests extends TestCase {
 		Integer items = 100;
 		Integer times[] = new Integer[items];
 		Integer satisfactions[] = new Integer[items];
-		Integer expectedResult = 1829;
+		Integer expectedResult = 2493893;
 		
 		Integer testData[][] = { { 16808, 250 }, { 50074, 659 }, { 8931, 273 }, { 27545, 879 }, { 77924, 710 },
 				{ 64441, 166 }, { 84493, 43 }, { 7988, 504 }, { 82328, 730 }, { 78841, 613 }, { 44304, 170 },
@@ -42,8 +42,8 @@ public class RestaurantCodeApplicationTests extends TestCase {
 				{ 28145, 969 }, { 35736, 916 }, { 61626, 535 }, { 46043, 12 }, { 54680, 153 } };
 		//Assigning values
 		for (Integer i = 0; i < items; i++) {
-			times[i] = testData[i][0];
 			satisfactions[i] = testData[i][1];
+			times[i] = testData[i][0];
 		}
 		assertEquals(restaurantService.maxSatisfaction(maxTime, times, satisfactions, items), expectedResult);
 	}
